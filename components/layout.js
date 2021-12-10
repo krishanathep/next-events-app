@@ -1,10 +1,14 @@
 import React from "react";
 import Head from "next/head";
-import styles from "../styles/Layout.module.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { useRouter } from "next/router";
+import styles from "@/styles/Layout.module.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Showcase from '@/components/Showcase'
 
 export default function layout({ title, keyword, description, children }) {
+  const router = useRouter();
+
   return (
     <div>
       <Head>
@@ -14,6 +18,9 @@ export default function layout({ title, keyword, description, children }) {
       </Head>
 
       <Header />
+
+      {router.pathname === '/' && <Showcase />}
+
       <main className={styles.container}>{children}</main>
       <Footer />
     </div>
