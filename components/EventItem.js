@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "@/styles/EventItem.module.css";
-
 import React from "react";
 
 export default function EventItem({ evt }) {

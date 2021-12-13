@@ -26,7 +26,20 @@
     color: red;
 }
 
-.back {
-    display: block;
-    margin-top: 40px;
+.edit {
+    margin-left: 20px;
+    color: darkblue;
 }
+
+.back {
+    background-color: blueviolet; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
