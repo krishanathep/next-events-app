@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Showcase from '@/components/Showcase'
 
-export default function layout({ title, keyword, description, children }) {
+export default function Layout({ title, keyword, description, children }) {
   const router = useRouter();
 
   return (
@@ -27,7 +27,7 @@ export default function layout({ title, keyword, description, children }) {
   );
 }
 
-layout.defaultProps = {
+Layout.defaultProps = {
   title: "DJ Events | Find the hottest parties",
   description: "Find the latest DJ and other music events",
   keyword: "music, dj, edm, events",
