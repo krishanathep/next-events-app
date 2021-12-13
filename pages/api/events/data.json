@@ -1,0 +1,64 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "name": "Thorwback Thursdays with DJ Many Duke",
+      "slug": "throwback-thursdays-with-dj-many-duke",
+      "venue": "Horizon Club",
+      "address": "919 3rd Ave New York, New Your(NY), 10022",
+      "performers": "DJ Manny Duke",
+      "date": "June 09, 2021",
+      "time": "10:00 PM EST",
+      "image": "/images/sample/event1.jpg",
+      "description": "Featureing deep cuts, party anthems and remixes nostalgic songs from two of the best decades of music with the very best music from the 90's and 2000's"
+    },
+    {
+      "id": "2",
+      "name": "Thorwback Thursdays with DJ Apaimanee Narak",
+      "slug": "throwback-thursdays-with-dj-apaimanee-narak",
+      "venue": "Thailand Club",
+      "address": "919 3rd Ave Thai land, Thai land(TH), 10800",
+      "performers": "DJ Apaimanee Narak",
+      "date": "June 22, 2021",
+      "time": "10:00 PM EST",
+      "image": "/images/sample/event2.jpg",
+      "description": "Featureing deep cuts, party anthems and remixes nostalgic songs from two of the best decades of music with the very best music from the 90's and 2000's"
+    },
+    {
+        "id": "3",
+        "name": "Thorwback Thursdays with DJ Jack Fanchan",
+        "slug": "throwback-thursdays-with-dj-jack-fanchan",
+        "venue": "Friend Club",
+        "address": "919 3rd Ave New York, New Your(NY), 10022",
+        "performers": "DJ Jack Fanchan",
+        "date": "June 09, 2021",
+        "time": "10:00 PM EST",
+        "image": "/images/sample/event3.jpg",
+        "description": "Featureing deep cuts, party anthems and remixes nostalgic songs from two of the best decades of music with the very best music from the 90's and 2000's"
+    },
+    {
+        "id": "4",
+        "name": "Thorwback Thursdays with DJ Soda Korea",
+        "slug": "throwback-thursdays-with-dj-soda-korea",
+        "venue": "Korea Club",
+        "address": "919 3rd Ave New York, New Your(NY), 10022",
+        "performers": "DJ Soda Korea",
+        "date": "June 09, 2021",
+        "time": "10:00 PM EST",
+        "image": "/images/sample/event4.jpg",
+        "description": "Featureing deep cuts, party anthems and remixes nostalgic songs from two of the best decades of music with the very best music from the 90's and 2000's"
+    },
+    {
+        "id": "5",
+        "name": "Thorwback Thursdays with DJ Matoom Tao",
+        "slug": "throwback-thursdays-with-dj-matoom-tao",
+        "venue": "Zoo Club",
+        "address": "919 3rd Ave New York, New Your(NY), 10022",
+        "performers": "DJ Matoom Tao",
+        "date": "June 09, 2021",
+        "time": "10:00 PM EST",
+        "image": "/images/sample/event5.jpg",
+        "description": "Featureing deep cuts, party anthems and remixes nostalgic songs from two of the best decades of music with the very best music from the 90's and 2000's"
+    }
+  ]
+}
