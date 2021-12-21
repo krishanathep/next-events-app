@@ -6,6 +6,7 @@ import Image from "next/image";
 import styles from "@/styles/Event.module.css";
 
 export default function EventPage({ evt }) {
+  console.log(evt)
   const deleteEvent = (e) => {
     console.log(deleteEvent);
   };
@@ -24,20 +25,20 @@ export default function EventPage({ evt }) {
           </a>
         </div>
         <span>
-          {evt.date} at {evt.time}
+          {evt.data.attributes.date} at {evt.data.attributes.time}
         </span>
-        <h1>{evt.name}</h1>
-        {evt.image && (
+        <h1>{evt.data.attributes.name}</h1>
+        {evt.data.attributes.image && (
           <div className={styles.image}>
-            <Image src={evt.image} width={960} height={600} />
+            <Image src={evt.data.attributes.image} width={960} height={600} />
           </div>
         )}
         <h3>Performers:</h3>
-        <p>{evt.performers}</p>
+        <p>{evt.data.attributes.performers}</p>
         <h3>Description:</h3>
-        <p>{evt.description}</p>
-        <h3>Venue: {evt.venue}</h3>
-        <p>{evt.address}</p>
+        <p>{evt.data.attributes.description}</p>
+        <h3>Venue: {evt.data.attributes.venue}</h3>
+        <p>{evt.data.attributes.address}</p>
         <Link href="/events">
           <a className={styles.back}>Go Back</a>
         </Link>
@@ -50,24 +51,21 @@ export async function getStaticPaths() {
   const res = await fetch(`${API_URL}/api/events`);
   const events = await res.json();
 
-  const paths = events.map((evt) => ({
-    params: { slug: evt.slug },
+  const paths = events.data.map((evt) => ({
+    params: { id: String(evt.id) },
   }));
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
 
-export async function getStaticProps({ params: { slug } }) {
-  const res = await fetch(`${API_URL}/api/events/${slug}`);
-  const events = await res.json();
+export async function getStaticProps({ params }) {
+  const res = await fetch(`${API_URL}/api/events/${params.id}`);
+  const evt = await res.json();
 
   return {
-    props: {
-      evt: events[0],
-    },
-    revalidate: 1,
+    props: { evt }
   };
 }
