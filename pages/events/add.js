@@ -9,19 +9,20 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function add() {
   const [values, setValues] = useState({
-    name: "",
-    performers: "",
-    venue: "",
-    address: "",
-    date: "",
-    time: "",
-    description: "",
+    name: "Test",
+    performers: "Test",
+    venue: "Test",
+    address: "Test",
+    date: "01/04/2021",
+    time: "Test",
+    description: "Test",
   });
 
   const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(values)
 
     // validation
     const hasEmptyFields = Object.values(values).some(
@@ -32,7 +33,7 @@ export default function add() {
       toast.error('Please fill in all fields');
     }
 
-    const res = await fetch(`${API_URL}/api/events`, {
+    const res = await fetch(`${API_URL}/api/events/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
